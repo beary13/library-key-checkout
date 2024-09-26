@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Key Checkout</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Student View -->
+    <div id="studentView">
+        <h1>Check Room Availability</h1>
+        <div id="statusContainer">
+            <h2 id="statusText">Key is available</h2>
+            <div id="statusCircle" class="available"></div>
+        </div>
+        <h3>Time remaining: <span id="countdownTimer">N/A</span></h3>
+        <h3>Sign up for the room:</h3>
+        <input type="text" id="studentName" placeholder="Enter your name" />
+        <input type="time" id="desiredTime" />
+        <button onclick="addStudent()">Sign Up</button>
+
+        <div>
+            <h3>Waitlist for Today:</h3>
+            <ul id="waitlist"></ul>
+        </div>
+    </div>
+
+    <!-- Librarian View (Hidden initially) -->
+    <div id="librarianView" style="display:none;">
+        <h1>Librarian Panel</h1>
+        <button id="toggleKeyButton" onclick="toggleKeyStatus()">Check out key</button>
+    </div>
+
+    <!-- Login for Librarian -->
+    <div id="loginSection">
+        <h2>Librarian Login</h2>
+        <input type="password" id="librarianPassword" placeholder="Enter password" />
+        <button onclick="loginLibrarian()">Login</button>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
